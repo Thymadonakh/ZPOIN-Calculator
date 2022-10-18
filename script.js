@@ -19,10 +19,16 @@ calculae.addEventListener("click", () => {
   discountValue = total * 0.2;
   vatValue = total * 0.1;
   grandTotal = total + vatValue - discountValue;
-  subTotal.innerHTML = `Sub Total: <span >$ ${total}</span>`;
+
+  if (total % 1 === 0) {
+    subTotal.innerHTML = `Sub Total: <span >$ ${total}.00</span>`;
+  } else {
+    subTotal.innerHTML = `Sub Total: <span >$ ${total}</span>`;
+  }
   discount.innerHTML = `Discount: <span >- $ ${discountValue.toFixed(
     2
   )}</span>`;
+
   vat.innerHTML = `VAT: <span>$ ${vatValue.toFixed(2)}</span>`;
   grandAmount.innerHTML = `Grand Total: <span>$ ${grandTotal.toFixed(
     2

@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    max-width: 50%;
+    max-width: 80%;
     font-size: 15px;
     min-height: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -23,8 +23,6 @@ main {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: #25316D;
     color: white;
-    min-width: 370px;
-    max-width: 800px;
 }
 .header {
     display: flex;
@@ -99,3 +97,6 @@ button:focus {
     color: red;
 }
 
+input::placeholder {
+    text-align: right;
+}
