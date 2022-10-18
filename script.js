@@ -23,7 +23,7 @@ calculae.addEventListener("click", () => {
   if (total % 1 === 0) {
     subTotal.innerHTML = `$ ${total}.00`;
   } else {
-    subTotal.innerHTML = `$ ${total}`;
+    subTotal.innerHTML = `$ ${total.toFixed(2)}`;
   }
   discount.innerHTML = `- $ ${discountValue.toFixed(2)}`;
 
