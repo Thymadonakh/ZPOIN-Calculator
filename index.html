@@ -12,11 +12,14 @@
     <main>
         <div class="header">
             <img src="./zpoin-logo.png" alt="" class="logo" width="100px">
-            <h1>Split Bill Calculator</h1>
+            <div>
+              <h1>Split Bill Calculator</h1>
+              <p1>How much ZPOIN I need to transfer? 🤔</p1>
+            </div>
         </div>
             <div class="form-item">
               <label for="fname">Name</label>
-              <input type="text" id="payer_name" name="fname" placeholder="Rithy" />
+              <input type="text" id="payer_name" name="fname" placeholder="Type your name (optionl)" />
             </div>
             <div class="form-item">
               <label for="item1">Item 1</label>
@@ -39,12 +42,23 @@
         <button class="reset">Reset</button>
       </div>
       <div class="amount">
-          <h3 class="sub-total">Sub Total: <span >$ 0.00</span> </h3>
-          <h3 class="discount">Discount: <span> $ 0.00</span> </h3>
-          <h3 class="vat">VAT: <span> $ 0.00</span> </h3>
+          <div class="amount-item">
+            <h3 >Sub Total: 
+            </h3> 
+            <h3 ><span class="sub-total">$ 0.00</span></h3> 
+          </div>
+          <div class="amount-item">
+            <h3 >VAT: </h3>
+            <h3><span class="vat"> $ 0.00</span></h3> 
+          </div>
+          <div class="amount-item">
+            <h3>Discount (20%): </h3>
+            <h3><span class="discount"> $ 0.00</span> </h3>
+          </div>
       </div>
-      <div >
-        <h2 class="grand-amount">Grand Total: <span>$ 0.00 </span> </h2>
+      <div class="amount-item grand-amount-item">
+        <h3 >Grand Total: </h3> 
+        <h3 class="grand-amount">$ 0.00 </h3>
       </div>
     </main>
     <script src="./script.js"></script>

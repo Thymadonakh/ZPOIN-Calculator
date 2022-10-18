@@ -21,18 +21,16 @@ calculae.addEventListener("click", () => {
   grandTotal = total + vatValue - discountValue;
 
   if (total % 1 === 0) {
-    subTotal.innerHTML = `Sub Total: <span >$ ${total}.00</span>`;
+    subTotal.innerHTML = `$ ${total}.00`;
   } else {
-    subTotal.innerHTML = `Sub Total: <span >$ ${total}</span>`;
+    subTotal.innerHTML = `$ ${total}`;
   }
-  discount.innerHTML = `Discount: <span >- $ ${discountValue.toFixed(
-    2
-  )}</span>`;
+  discount.innerHTML = `- $ ${discountValue.toFixed(2)}`;
 
-  vat.innerHTML = `VAT: <span>$ ${vatValue.toFixed(2)}</span>`;
-  grandAmount.innerHTML = `Grand Total: <span>$ ${grandTotal.toFixed(
-    2
-  )}</span>`;
+  vat.innerHTML = `$ ${vatValue.toFixed(2)}`;
+  grandAmount.innerHTML = `$ ${grandTotal.toFixed(2)}`;
+
+  discount.style.color = "#FA7070";
 });
 
 reset.addEventListener("click", () => location.reload());
