@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZPOIN Split Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+        <div class="header">
+            <div>
+                <img src="./zpoin-logo.png" alt="" class="logo" width="60px">
+            </div>
+            <h1>Split Bill Calculator</h1>
+        </div>
+            <div class="form-item">
+              <label for="fname">Name</label>
+              <input type="text" id="payer_name" name="fname" placeholder="Rithy" />
+            </div>
+            <div class="form-item">
+              <label for="item1">Item 1</label>
+              <input type="number" id="item1" name="item1" placeholder="3.99" />
+            </div>
+            <div class="form-item">
+              <label for="item2">Item 2</label>
+              <input type="number" id="item2" name="item2" placeholder="2.99" />
+            </div>
+            <div class="form-item">
+              <label for="item3">Item 3</label>
+              <input type="number" id="item3" name="item3" placeholder="2.99"/>
+            </div>
+            <div class="form-item">
+                <label for="item4">Item 4</label>
+                <input type="number" id="item4" name="item4" placeholder="2.99"/>
+              </div>
+      <div class="calBtn">
+        <button class="calculate">Calculate</button>
+      </div>
+      <div class="amount">
+          <h3 class="sub-total">Sub Total: <span >$ 0.00</span> </h3>
+          <h3 class="discount">Discount: <span> $ 0.00</span> </h3>
+          <h3 class="vat">VAT: <span> $ 0.00</span> </h3>
+      </div>
+      <div >
+        <h2 class="grand-amount">Grand Total: <span>$ 0.00 </span> </h2>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
