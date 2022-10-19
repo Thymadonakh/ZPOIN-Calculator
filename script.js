@@ -1,6 +1,7 @@
 const calculae = document.querySelector(".calculate");
 const subTotal = document.querySelector(".sub-total");
 const discount = document.querySelector(".discount");
+const cashback = document.querySelector(".cashback");
 const vat = document.querySelector(".vat");
 const grandAmount = document.querySelector(".grand-amount");
 const reset = document.querySelector(".reset");
@@ -9,6 +10,7 @@ let total = 0;
 let discountValue = 0;
 let vatValue = 0;
 let grandTotal = 0;
+let cashbackValue = 0;
 
 calculae.addEventListener("click", () => {
   let input1 = Number(document.getElementById("item1").value);
@@ -18,7 +20,8 @@ calculae.addEventListener("click", () => {
   total = input1 + input2 + input3 + input4;
   discountValue = total * 0.2;
   vatValue = total * 0.1;
-  grandTotal = total + vatValue - discountValue;
+  cashbackValue = total * 0.1;
+  grandTotal = total + vatValue - discountValue - cashbackValue;
 
   if (total % 1 === 0) {
     subTotal.innerHTML = `$ ${total.toFixed(2)}`;
@@ -26,11 +29,12 @@ calculae.addEventListener("click", () => {
     subTotal.innerHTML = `$ ${total.toFixed(2)}`;
   }
   discount.innerHTML = `- $ ${discountValue.toFixed(2)}`;
-
+  cashback.innerHTML = `- $ ${cashbackValue.toFixed(2)}`;
   vat.innerHTML = `$ ${vatValue.toFixed(2)}`;
   grandAmount.innerHTML = `$ ${grandTotal.toFixed(2)}`;
 
   discount.style.color = "#FA7070";
+  cashback.style.color = "#FA7070";
 });
 
 reset.addEventListener("click", () => location.reload());
